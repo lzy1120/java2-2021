@@ -5,7 +5,8 @@ import java.util.Date;
 
 public class Car {
     String id;
-    Date enter;
+    private Date enter;
+
     public Car(String id) {
         this.id = id;
         enter = new Date();
@@ -20,5 +21,9 @@ public class Car {
         now.set(Calendar.HOUR_OF_DAY, Integer.parseInt(tokens[0]));
         now.set(Calendar.MINUTE, Integer.parseInt(tokens[1]));
         enter = now.getTime();
+    }
+
+    public Date getEnter() {
+        return enter;
     }
 }
